@@ -12,7 +12,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  margin: 0% 20%;
+  margin: 0% 5%;
 }
 
 code {
@@ -32,6 +32,29 @@ h3 {
   margin: 2rem 0rem;
 }
 
-a{
+a {
   color: rgb(56, 56, 56);
+}
+
+.btn-category {
+  width: 135px !important;
+  height: 135px !important;
+  margin-left: 80px;
+  margin-right: 80px;
+  border-radius: 50%;
+  background: linear-gradient(35deg, #494949, #313131);
+}
+
+.btn-category svg {
+  width: 22px;
+  height: 22px;
+}
+
+.btn-category h4 {
+  color: var(--bs-white);
+}
+
+.active-tab {
+  background: linear-gradient(35deg, #494949, #313131);
+  color: white;
 }
