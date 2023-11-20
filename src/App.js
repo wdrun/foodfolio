@@ -9,13 +9,27 @@ function App() {
   return (
     <div className="App">
       <BrowserRouter>
-      <Nav>
-        <GiBurningBook />
-        <Logo to={'/'}>foodfolio</Logo>
-      </Nav>
-        <Search />
+      <br/>
+
+      <div class="w-100 p-lg-4 p-md-2 p-sm-0 pt-2">
+        <div class="row">
+          <div class="col-lg-8">
+            <GiBurningBook class="display-3 mb-4 mx-2" align="center" />
+            <Logo to={'/'}>foodfolio</Logo>
+          </div>
+
+          <div class="col-lg-4">
+            <Search />
+          </div>
+        </div>
+      </div>
+
+      <div class="container-fluid mt-4" align="center">
         <Category />
-        <Pages />
+      </div>
+      <br/>
+
+      <Pages />
       </BrowserRouter>
     </div>
   );
@@ -26,16 +40,6 @@ const Logo = styled(Link)`
   font-size: 2.5rem;
   font-weight: 400;
   font-family: 'Lobster Two', cursive;
-`;
-
-const Nav = styled.div`
-  padding: 4rem 0rem;
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  svg{
-    font-size: 3rem;
-  }
 `;
 
 export default App;

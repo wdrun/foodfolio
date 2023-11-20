@@ -20,18 +20,28 @@ function Recipe() {
   }, [params.name]);
 
   return (
-    <DetailWrapper>
-      <div>
-        <h2>{Details.title}</h2>
-        <img src={Details.image} alt="" />
-      </div>
-      <Info>
-        <Button className={activeTab === 'instructions' ? 'active' : ''} onClick={() => setActiveTab('instructions')}>Instructions</Button>
-        <Button className={activeTab === 'ingredients' ? 'active' : ''} onClick={() => setActiveTab('ingredients')}>Ingredients</Button>
+    <div align="center">
+      <div class="card card-body border border-2 rounded border-primary mb-4 p-4 col-lg-9" align="left">
+        <div class="container-fluid" align="center">
+          <img src={Details.image} class="rounded" />
+          <h2>{Details.title}</h2>
+          <hr/>
+        </div>
+
+        <div class="row">
+          <div class="col-6">
+            <Button className={activeTab === 'instructions' ? 'active-tab' : ''} onClick={() => setActiveTab('instructions')}>Instructions</Button>
+          </div>          
+
+          <div class="col-6">
+            <Button className={activeTab === 'ingredients' ? 'active-tab' : ''} onClick={() => setActiveTab('ingredients')}>Ingredients</Button>
+          </div>          
+        </div>
+
         {activeTab === 'instructions' && (
           <div>
-            <h3 dangerouslySetInnerHTML={{ __html: Details.summary }}></h3>
-            <h3 dangerouslySetInnerHTML={{ __html: Details.instructions }}></h3>
+            <p dangerouslySetInnerHTML={{ __html: Details.summary }}></p>
+            <p dangerouslySetInnerHTML={{ __html: Details.instructions }}></p>
           </div>
         )}
         {activeTab === 'ingredients' && (
@@ -39,30 +49,10 @@ function Recipe() {
             <li key={ingredient.id}>{ingredient.original}</li>)}
           </ul>
         )}
-      </Info>
-    </DetailWrapper>
+    </div>
+    </div>
   )
 }
-
-const DetailWrapper = styled.div`
-    margin-top: 10rem;
-    margin-bottom: 5rem;
-    display: flex;
-    .active{
-        background: linear-gradient(35deg, #494949, #313131);
-        color: white;
-    }
-    h2{
-        margin-bottom: 2rem;
-    }
-    li{
-        font-size:1.2rem;
-        line-height: 2.5rem;
-    }
-    ul{
-        margin-top: 2rem;
-    }
-`;
 
 const Button = styled.button`
   padding: 1rem 2rem;
@@ -71,10 +61,7 @@ const Button = styled.button`
   border: 2px solid black;
   margin-right: 2rem;
   font-weight: 600;
-`;
-
-const Info = styled.div`
-  margin-left: 10rem;
+  width: 100%;
 `;
 
 export default Recipe

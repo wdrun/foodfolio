@@ -19,6 +19,7 @@ function Search() {
                 <input onChange={(e) => setInput(e.target.value)}
                     type="text"
                     value={Input}
+                    class="w-100"
                 />
             </div>
         </FormStyle>
@@ -26,20 +27,18 @@ function Search() {
 }
 
 const FormStyle = styled.form`
-    margin: 0rem 20rem;
     div{
         position: relative;
-        width: 100%;
     }
     input{
         border: none;
         background: linear-gradient(35deg, #494949, #313131);
         font-size: 1.5rem;
         color: white;
-        padding: 1rem 3rem;
+        padding: 1rem 1rem;
+        padding-left: 1.75em;
         border-radius: 1rem;
         outline: none;
-        width: 100%;
     }
     svg{
         position: absolute;
