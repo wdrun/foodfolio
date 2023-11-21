@@ -39,7 +39,7 @@ const Logo = styled(Link)`
   text-decoration: none;
   font-size: 2.5rem;
   font-weight: 400;
-  font-family: 'Lobster Two', cursive;
+  font-family: 'Kdam Thmor Pro';
 `;
 
 export default App;
