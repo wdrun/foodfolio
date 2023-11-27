@@ -49,7 +49,7 @@ const Grid = styled(motion.div)`
 const Card = styled.div`
     img{
         display: block;
-        width: 100%;
+        width: 50%;
         border-radius: 2rem;
     }
     a{
