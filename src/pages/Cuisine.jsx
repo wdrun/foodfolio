@@ -50,6 +50,8 @@ const Card = styled.div`
     img{
         display: block;
         width: 50%;
+        margin-left: auto;
+        margin-right: auto;
         border-radius: 2rem;
     }
     a{
