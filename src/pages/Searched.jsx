@@ -43,7 +43,7 @@ const Grid = styled.div`
 const Card = styled.div`
     img{
         display: block;
-        width: 100%;
+        width: 50%;
         margin-left: auto;
         margin-right: auto;
         border-radius: 2rem;
