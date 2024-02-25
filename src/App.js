@@ -11,26 +11,27 @@ function App() {
       <BrowserRouter>
       <br/>
 
-      <div class="w-100 p-lg-4 p-md-2 p-sm-0 pt-2">
-        <div class="row">
-          <div class="col-lg-8">
-            <GiBurningBook class="display-3 mb-4 mx-2" align="center" />
+      <div className="main-nav w-100 p-lg-4 p-md-2 p-sm-0 pt-2">
+        <div className="row">
+          <div className="col-lg-8">
+            <GiBurningBook className="display-3 mb-4 mx-2" align="center" />
             <Logo to={'/'}>foodfolio</Logo>
           </div>
 
-          <div class="col-lg-4">
+          <div className="col-lg-4">
             <Search />
           </div>
         </div>
-      </div>
 
-      <div class="container-fluid mt-4" align="center">
+      <div className="container-fluid mt-4" align="center">
         <Category />
       </div>
       <br/>
 
       <Pages />
+      </div>
       </BrowserRouter>
+      <br/><br/>
     </div>
   );
 }
